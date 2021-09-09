@@ -627,6 +627,7 @@ section.lazy-placeholder:after {
   min-height: 77px;
   transition: all .3s;
   background: #333333;
+  background: none;
 }
 .cid-rzMrgNeUFf .navbar.opened {
   transition: all .3s;
@@ -921,14 +922,14 @@ section.lazy-placeholder:after {
   margin-left: 4px !important;
 }
 .cid-rzMt37x8iA .animated-element {
-  color: #ffbc00;
+  color: #ffffff;
 }
 .cid-rzMt37x8iA .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
-  color: #ffbc00;
+  color: #ffffff;
 }
 @keyframes blink {
   0% {
@@ -1070,88 +1071,6 @@ section.lazy-placeholder:after {
   .cid-sIpXVSBJLG .image-block:before {
     opacity: 0.2!important;
   }
-}
-.cid-sIq2nulLBz {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #ffffff;
-}
-.cid-sIpP2lG0QG {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #333333;
-}
-.cid-sIpP2lG0QG h5,
-.cid-sIpP2lG0QG h4,
-.cid-sIpP2lG0QG p {
-  margin-bottom: 0;
-}
-.cid-sIpP2lG0QG p {
-  color: #767676;
-}
-@media (max-width: 767px) {
-  .cid-sIpP2lG0QG .container-fluid {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-.cid-sIpP2lG0QG .card-link {
-  padding-top: 1.2rem;
-  margin-top: 1.2rem;
-  border-top: 1px solid #cccccc;
-}
-.cid-sIpP2lG0QG .card-wrapper {
-  transition: all 0.3s;
-  background-color: #ffffff;
-}
-.cid-sIpP2lG0QG .card-wrapper .card-box {
-  padding: 1.2rem;
-}
-.cid-sIpP2lG0QG .card-wrapper:hover {
-  box-shadow: 0 10px 55px 5px rgba(103, 173, 219, 0.35);
-}
-.cid-sIpP2lG0QG .card-title-link {
-  float: left;
-}
-.cid-sIpP2lG0QG .card-price {
-  float: right;
-}
-.cid-sIpP2lG0QG .card-title-link {
-  position: relative;
-}
-.cid-sIpP2lG0QG .card-title-link:after {
-  content: "";
-  transition: all 0.3s;
-  border-bottom: 1px solid currentColor;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-}
-.cid-sIpP2lG0QG .card-title-link:hover:after {
-  width: 100%;
-}
-.cid-sIpP2lG0QG .card-box {
-  padding-top: 2rem;
-  display: inline-block;
-  width: 100%;
-}
-.cid-sIpP2lG0QG .card-wrapper {
-  height: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.cid-sIpP2lG0QG .card-wrapper .card-title {
-  transition: all 0.3s;
-}
-.cid-sIpP2lG0QG .card-wrapper:hover .card-title {
-  color: #ffbc00;
-}
-.cid-sIpP2lG0QG .card-title-link {
-  color: #149dcc;
-}
-.cid-sIpP2lG0QG .card-title {
-  color: #232323;
 }
 .cid-rzMraftkbp {
   padding-top: 90px;
