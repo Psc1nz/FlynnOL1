@@ -58,7 +58,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "pwa-switcher": false,
-    "uniqCompNum": 3,
+    "uniqCompNum": 7,
     "versionPublish": "5.4.1",
     "screenshot": "screenshot.png",
     "publishChangesOnly": false
@@ -526,84 +526,230 @@
           "_params": {}
         },
         {
-          "alias": "mobirise4-blocks/components",
-          "_isSecondary": true,
-          "typeCompatible": "type",
+          "alias": false,
           "_styles": {
-            "background": "@bgColor",
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            ".image-block": {
-              "margin": "auto",
-              "height": "~\"@{imageHeight}px\"",
-              "overflow": "hidden",
-              "position": "relative",
-              "&:before": {
-                "content": "''",
-                "position": "absolute",
-                "width": "100%",
-                "height": "100%",
-                "background-color": "@bgImage",
-                "opacity": "0",
-                "left": "0",
-                "top": "0",
-                "transition": "all 0.3s",
-                "pointer-events": "none",
-                "z-index": "2"
-              },
-              "&:hover": {
-                "&:before": {
-                  "opacity": "@bgOpacity"
-                },
-                ".wrap": {
-                  "opacity": "1"
-                },
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)",
+              ".carousel": {
+                "height": "800px",
                 "img": {
-                  "transform": "scale(1.05)"
+                  "width": "100%",
+                  "height": "100%",
+                  "-o-object-fit": "cover",
+                  "object-fit": "cover"
                 }
+              },
+              ".carousel-item, .carousel-inner": {
+                "height": "100%"
               }
             },
-            "h4": {
-              "letter-spacing": "2px"
-            },
-            "figcaption": {
-              "position": "relative",
-              ".wrap": {
-                "position": "absolute",
-                "bottom": "2rem",
-                "width": "100%",
-                "opacity": "0",
-                "padding": "1rem",
-                "transition": "all 0.3s",
-                "z-index": "3"
+            "& when (@fullScreen)": {
+              "padding-top": "0",
+              "padding-bottom": "0",
+              ".carousel": {
+                "width": "100%"
+              },
+              ".carousel-inner": {
+                "display": "flex",
+                "align-content": "center",
+                "align-items": "center"
+              },
+              ".carousel-item img": {
+                "height": "100vh",
+                "-o-object-fit": "cover",
+                "object-fit": "cover"
               }
             },
-            "img": {
-              "width": "100%",
-              "height": "100%",
-              "transition": "all 3s",
-              "object-fit": "cover"
+            "background-color": "@bgColor",
+            ".mbr-overlay": {
+              "z-index": "1"
             },
-            "@media (max-width: 991px)": {
-              ".image-block": {
-                "max-height": "400px"
-              }
+            ".carousel-caption": {
+              "top": "50%",
+              "right": "0",
+              "bottom": "auto",
+              "left": "0",
+              "display": "-webkit-flex",
+              "align-items": "center",
+              "transform": "translateY(-50%)",
+              "-webkit-align-items": "center",
+              "padding-left": "120px",
+              "padding-right": "120px",
+              "justify-content": "center"
+            },
+            ".mobi-mbri-arrow-next": {
+              "margin-left": "5px"
+            },
+            ".mobi-mbri-arrow-prev": {
+              "margin-right": "5px"
+            },
+            ".carousel-control:hover": {
+              "color": "#fff",
+              "opacity": "1"
+            },
+            ".item-wrapper": {
+              "width": "100%"
             },
             "@media (max-width: 767px)": {
-              ".wrap": {
-                "opacity": "1!important"
+              ".container .carousel-control": {
+                "margin-bottom": "0"
               },
-              ".image-block": {
-                "&:before": {
-                  "opacity": "0.2!important"
+              ".content-slider-wrap": {
+                "width": "100% !important"
+              }
+            },
+            ".container .carousel-indicators": {
+              "margin-bottom": "3px"
+            },
+            ".carousel-control": {
+              "top": "50%",
+              "width": "60px",
+              "height": "60px",
+              "margin-top": "-1.5rem",
+              "font-size": "40px",
+              "border-radius": "50%",
+              "transition": "all 0.3s",
+              "opacity": ".8",
+              "&.carousel-control-prev": {
+                "left": "0",
+                "margin-left": "2.5rem"
+              },
+              "&.carousel-control-next": {
+                "right": "0",
+                "margin-right": "2.5rem"
+              },
+              "@media (max-width: 767px)": {
+                "top": "auto",
+                "bottom": "1rem"
+              }
+            },
+            ".carousel-indicators": {
+              "position": "absolute",
+              "bottom": "0",
+              "margin-bottom": "1.5rem !important",
+              "li": {
+                "max-width": "15px",
+                "height": "15px",
+                "width": "15px",
+                "max-height": "15px",
+                "margin": "3px",
+                "background-color": "@indicatorsColor",
+                "border": "0px solid transparent",
+                "border-radius": "50%",
+                "opacity": "1",
+                "transition": "all 0.3s",
+                "&.active": {
+                  "background-color": "@activeIndicatorColor"
+                },
+                "&.active, &:hover": {
+                  "opacity": "0.9"
+                },
+                "&::after, &::before": {
+                  "content": "none"
+                }
+              },
+              "&.ie-fix": {
+                "left": "50%",
+                "display": "block",
+                "width": "60%",
+                "margin-left": "-30%",
+                "text-align": "center"
+              },
+              "@media (max-width: 768px)": {
+                "display": "none !important"
+              }
+            },
+            ".btn": {
+              "&.btn-primary-outline": {
+                "border": "1px solid @primaryColor",
+                "&:hover": {
+                  "background-color": "@primaryColor !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-secondary-outline": {
+                "border": "1px solid @secondaryColor",
+                "&:hover": {
+                  "background-color": "@secondaryColor !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-success-outline": {
+                "border": "1px solid @successColor",
+                "&:hover": {
+                  "background-color": "@successColor !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-info-outline": {
+                "border": "1px solid @infoColor",
+                "&:hover": {
+                  "background-color": "@infoColor !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-warning-outline": {
+                "border": "1px solid @warningColor",
+                "&:hover": {
+                  "background-color": "@warningColor !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-danger-outline": {
+                "border": "1px solid @dangerColor",
+                "&:hover": {
+                  "background-color": "@dangerColor !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-black-outline": {
+                "border": "1px solid #000000",
+                "&:hover": {
+                  "background-color": "#000000 !important",
+                  "color": "#ffffff !important"
+                }
+              },
+              "&.btn-white-outline": {
+                "border": "1px solid #ffffff",
+                "&:hover": {
+                  "background-color": "#ffffff !important",
+                  "color": "#000000 !important"
                 }
               }
+            },
+            ".container-fluid": {
+              "padding-left": "0",
+              "padding-right": "0"
+            },
+            "@media (max-width: 768px)": {
+              ".carousel-caption": {
+                "padding-left": "15px",
+                "padding-right": "15px"
+              },
+              ".carousel-control": {
+                "display": "none"
+              },
+              ".buttons-wrap": {
+                "flex-wrap": "wrap",
+                "flex-direction": "column",
+                "justify-content": "center",
+                ".mbr-section-btn": {
+                  "text-align": "center",
+                  "margin-bottom": "10px"
+                }
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "center",
+              "color": "#ffffff"
             }
           },
-          "_name": "extImage1",
-          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"checkbox\" title=\"Fill Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        \n        <input type=\"range\" inline title=\"Count\" name=\"imageCount\" min=\"1\" max=\"4\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline title=\"Height Image\" name=\"imageHeight\" min=\"300\" max=\"800\" value=\"500\" step=\"50\">\n\n        <input type=\"checkbox\" title=\"Show Padding\" name=\"showPadding\">\n        <input type=\"color\" title=\"Background Image\" name=\"bgImage\" value=\"#000000\">\n        <input type=\"range\" inline title=\"Opacity Bg Image\" name=\"bgOpacity\" min=\"0\" max=\"1\" value=\"0.4\" step=\"0.1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show SubTitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid':fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'m-0':!fullWidth && !showPadding}\">\n            <div mbr-class=\"{'col-md-6': imageCount < 3 || imageCount == 4, 'col-md-4': imageCount == 3, 'col-lg-3': imageCount == 4, 'p-0':!showPadding,'pb-3 pb-md-0': (imageCount == 3 || imageCount == 2) &amp;&amp; showPadding, 'pb-3 pb-lg-0': imageCount == 4 &amp;&amp; showPadding}\">\n\n                <div class=\"image-block\">\n                    <img src=\"@PROJECT_PATH@/assets/images/flynnwarf-1012x759.jpg\" alt=\"Mobirise\" title>\n                    <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText || showTitle || showSubTitle\">\n                        <div class=\"wrap\">\n                            <h4 mbr-text class=\"pb-2 mbr-white mbr-bold align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">\n                                Seatoun</h4>\n                            <h3 mbr-text class=\"pb-2 mbr-white mbr-semibold align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">\n                                Landscapes Photography\n                            </h3>\n\n                            <p mbr-text class=\"mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\"></p>\n                        </div>\n                    </figcaption>\n                </div>\n            </div>\n\n            <div mbr-class=\"{'col-md-6': imageCount < 3 || imageCount == 4, 'col-md-4': imageCount == 3, 'col-lg-3': imageCount == 4, 'p-0':!showPadding, 'pb-3 pb-md-0': (imageCount == 3 || imageCount == 2) &amp;&amp; showPadding, 'pb-3 pb-lg-0': imageCount == 4 &amp;&amp; showPadding}\" mbr-if=\"imageCount > 1\">\n                <div class=\"image-block\">\n                    <img src=\"@PROJECT_PATH@/assets/images/flynn5-640x427.jpg\" alt=\"Mobirise\" title>\n                    <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText || showTitle || showSubTitle\">\n                        <div class=\"wrap\">\n                            <h4 mbr-text class=\"pb-2 mbr-white mbr-bold align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">\n                                Miramar</h4>\n                            <h3 mbr-text class=\"pb-2 mbr-white mbr-semibold align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">\n                                Landscapes Photography\n                            </h3>\n                            <p mbr-text class=\"mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\"></p>\n                        </div>\n                    </figcaption>\n                </div>\n\n            </div>\n\n            <div mbr-class=\"{'col-md-6': imageCount < 3 || imageCount == 4, 'col-md-4': imageCount == 3, 'col-lg-3': imageCount == 4, 'p-0':!showPadding, 'pt-md-3 pt-lg-0': imageCount == 4 &amp;&amp; showPadding}\" mbr-if=\"imageCount > 2\">\n                <div class=\"image-block\">\n                    <img src=\"@PROJECT_PATH@/assets/images/flynn7-1012x506.jpg\" alt=\"Mobirise\" title>\n                    <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText || showTitle || showSubTitle\">\n                        <div class=\"wrap\">\n                            <h4 mbr-text class=\"pb-2 mbr-white mbr-bold align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">\n                                Lyall bay</h4>\n                            <h3 mbr-text class=\"pb-2 mbr-white mbr-semibold align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">\n                                Landscapes Photography\n                            </h3>\n                            <p mbr-text class=\"mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\"></p>\n                        </div>\n                    </figcaption>\n                </div>\n\n            </div>\n            \n            <div mbr-class=\"{'col-md-6': imageCount < 3 || imageCount == 4, 'col-md-4': imageCount == 3, 'col-lg-3': imageCount == 4, 'p-0':!showPadding, 'pt-md-3 pt-lg-0': imageCount == 4 &amp;&amp; showPadding}\" mbr-if=\"imageCount > 3\">\n                <div class=\"image-block\">\n                    <img src=\"@PROJECT_PATH@/assets/images/flynn8-760x414.jpg\" alt=\"Mobirise\" title>\n                    <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText || showTitle || showSubTitle\">\n                        <div class=\"wrap\">\n                            <h4 mbr-text class=\"pb-2 mbr-white mbr-bold align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">\n                                Strathmore</h4>\n                            <h3 mbr-text class=\"pb-2 mbr-white mbr-semibold align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\">\n                                Landscapes Photography\n                            </h3>\n                            <p mbr-text class=\"mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\">\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                            </p>\n                        </div>\n                    </figcaption>\n                </div>\n\n            </div>\n\n\n        </div>\n\n    </div>\n\n\n</section>",
-          "_cid": "sIpXVSBJLG",
-          "_anchor": "extImage1-1",
+          "_name": "slider1",
+          "_sourceTheme": "directm4",
+          "_customHTML": "<section class=\"slider1\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"1\" max=\"12\" step=\"1\" value=\"12\" condition=\"!fullScreen\">\n        <header>Carousel</header>\n        <input type=\"checkbox\" title=\"Fade Effect\" name=\"fade\" checked>\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\" checked>\n        <input type=\"range\" title=\"Interval\" name=\"interval\" min=\"3\" max=\"10\" value=\"5\" step=\"1\" condition=\"autoplay\">\n        <input type=\"color\" title=\"Indicators\" name=\"indicatorsColor\" value=\"#e5e5e5\" selected>\n        <input type=\"color\" title=\"Active Indicator\" name=\"activeIndicatorColor\" value=\"#5aac98\" selected>\n        <header>Slide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showCaption\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Link\" name=\"showLink\" condition=\"showButtons\">\n        <input type=\"checkbox\" title=\"Arrow\" name=\"showArrow\" condition=\"fullScreen\" checked>\n        <select title=\"Buttons Align\" name=\"buttonsAlign\">\n            <option value>Left</option>\n            <option value=\"justify-content-center\" selected>Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#eeeeee\" selected>\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div id=\"{{sliderId}}\" class=\"carousel slide\" mbr-class=\"{'carousel-fade': fade}\" data-ride=\"{{autoplay ? 'carousel' : false}}\" data-interval=\"{{interval*1000}}\">\n            <ol class=\"carousel-indicators\">\n                <li data-target=\"#{{sliderId}}\" data-slide-to=\"0\" class=\"active\"></li>\n                <li data-target=\"#{{sliderId}}\" data-slide-to=\"1\"></li>\n                <li data-target=\"#{{sliderId}}\" data-slide-to=\"2\"></li>\n                <li data-target=\"#{{sliderId}}\" data-slide-to=\"3\"></li>\n                <li data-target=\"#{{sliderId}}\" data-slide-to=\"4\"></li>\n            </ol>\n            <div class=\"carousel-inner\">\n                <div class=\"carousel-item slider-image item active\">\n                    <div class=\"item-wrapper\">\n                        <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/flynnwarf-1920x1440.jpg\">\n                        <div class=\"mbr-overlay\" mbr-if=\"overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n                        </div>\n                        <div class=\"carousel-caption\" mbr-if=\"showCaption\">\n                            <div class=\"row justify-content-center\">\n                                <div class=\"col-md-{{contentWidth}}\">\n                                    <h1 class=\"mbr-section-title mbr-fonts-style mbr-white\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">SEATOUN</h1>\n                                    <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3 mbr-white\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">\n                                        Header Subtitle\n                                    </h2>\n                                    <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Seatoun, an eastern suburb of Wellington, the capital city of New Zealand, lies on the east coast of the Miramar Peninsula, close to the entrance to Wellington Harbour (Port Nicholson), some seven kilometres southeast of the CBD.\n<br>Seatoun statistical area, which also includes Breaker Bay, covers 1.33 km2. It had an estimated population of 2,380 as of June 2020 with a population density of 1,789 people per km2.</p>\n                                    <div class=\"buttons-wrap d-flex align-left {{buttonsAlign}} align-self-center\" mbr-if=\"showButtons\">\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                                            <a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se/\" data-app-placeholder=\"Type Text\">Download for Windows</a>\n                                        </div>\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn link align-self-center\" mbr-if=\"showLink && showButtons\">\n                                            <a class=\"btn btn-md btn-white-outline my-auto ml-md-4 ml-0\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\" mbr-if=\"showLink && showButtons\">Or View\n                                                Demo</a>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item slider-image item\">\n                    <div class=\"item-wrapper\">\n                        <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/flynn8-1023x557.jpg\">\n                        <div class=\"mbr-overlay\" mbr-if=\"overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n                        </div>\n                        <div class=\"carousel-caption\" mbr-if=\"showCaption\">\n                            <div class=\"row justify-content-center\">\n                                <div class=\"col-md-{{contentWidth}}\">\n                                    <h1 class=\"mbr-section-title mbr-fonts-style mbr-white\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">STRATHMORE</h1>\n                                    <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3 mbr-white\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">\n                                        Header Subtitle\n                                    </h2>\n                                    <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Strathmore Park is a suburb of Wellington City, New Zealand. It is located at the southern end of the Miramar Peninsula to the south of the suburb of Miramar, and due east of airport. A hill suburb, it overlooks Lyall Bay (which lies to the west), Evans Bay (to the North) and several bays along the Seatoun coast close to the mouth of Wellington Harbour, which lies to the east.\n<br>Strathmore (Wellington City) statistical area covers 1.48 km2. It had an estimated population of 3,920 as of June 2020 with a population density of 2,649 people per km2.</p>\n                                    <div class=\"buttons-wrap d-flex align-left {{buttonsAlign}} align-self-center\" mbr-if=\"showButtons\">\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                                            <a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se/\" data-app-placeholder=\"Type Text\">Download for Windows</a>\n                                        </div>\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn link align-self-center\" mbr-if=\"showLink && showButtons\">\n                                            <a class=\"btn btn-md btn-white-outline my-auto ml-md-4 ml-0\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\" mbr-if=\"showLink && showButtons\">Or View\n                                                Demo</a>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item slider-image item\">\n                    <div class=\"item-wrapper\">\n                        <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/miramarold-640x361.jpg\">\n                        <div class=\"mbr-overlay\" mbr-if=\"overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n                        </div>\n                        <div class=\"carousel-caption\" mbr-if=\"showCaption\">\n                            <div class=\"row justify-content-center\">\n                                <div class=\"col-md-{{contentWidth}}\">\n                                    <h1 class=\"mbr-section-title mbr-fonts-style mbr-white\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">MIRAMAR</h1>\n                                    <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3 mbr-white\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">\n                                        Header Subtitle\n                                    </h2>\n                                    <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">'Miramar' means \"sea view\" in Spanish. The name was chosen by the first European to settle in the area\n<br>Miramar is a suburb of Wellington, New Zealand, south-east of the city centre. It is on the Miramar Peninsula, directly east of the isthmus of Rongotai, the site of Wellington International Airport.\n<br>Miramar, comprising the statistical areas of Miramar North, Miramar Central, Miramar East and Miramar South, covers 2.87 km2. It had an estimated population of 10,060 as of June 2020\n<br>\n<br></p>\n                                    <div class=\"buttons-wrap d-flex align-left {{buttonsAlign}} align-self-center\" mbr-if=\"showButtons\">\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                                            <a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se/\" data-app-placeholder=\"Type Text\">Download for Windows</a>\n                                        </div>\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn link align-self-center\" mbr-if=\"showLink && showButtons\">\n                                            <a class=\"btn btn-md btn-white-outline my-auto ml-md-4 ml-0\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\" mbr-if=\"showLink && showButtons\">Or View\n                                                Demo</a>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item slider-image item\">\n                    <div class=\"item-wrapper\">\n                        <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/flynn7-1200x600.jpg\" alt>\n                        <div class=\"mbr-overlay\" mbr-if=\"overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n                        </div>\n                        <div class=\"carousel-caption\" mbr-if=\"showCaption\">\n                            <div class=\"row justify-content-center\">\n                                <div class=\"col-md-{{contentWidth}}\">\n                                    <h1 class=\"mbr-section-title mbr-fonts-style mbr-white\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">LYALL BAY</h1>\n                                    <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3 mbr-white\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">\n                                        Header Subtitle\n                                    </h2>\n                                    <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Lyall Bay is a bay and a suburb on the south side of the Rongotai isthmus in Wellington, New Zealand.\n<br>The bay is a popular surf beach, featuring a breakwater at the eastern end. It has also been the site of surf lifesaving championships, and is home to two surf lifesaving clubs. Lyall Bay is a very popular and safe swimming beach.\n<br>Lyall Bay statistical area covers 0.55 km2. It had an estimated population of 2,750 as of June 2020 with a population density of 5,000 people per km2</p>\n                                    <div class=\"buttons-wrap d-flex align-left {{buttonsAlign}} align-self-center\" mbr-if=\"showButtons\">\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                                            <a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se/\" data-app-placeholder=\"Type Text\">Download for Windows</a>\n                                        </div>\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn link align-self-center\" mbr-if=\"showLink && showButtons\">\n                                            <a class=\"btn btn-md btn-white-outline my-auto ml-md-4 ml-0\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\" mbr-if=\"showLink && showButtons\">Or View\n                                                Demo</a>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item slider-image item\">\n                    <div class=\"item-wrapper\">\n                        <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/easternsub-1920x1197.jpg\">\n                        <div class=\"mbr-overlay\" mbr-if=\"overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n                        </div>\n                        <div class=\"carousel-caption\" mbr-if=\"showCaption\">\n                            <div class=\"row justify-content-center\">\n                                <div class=\"col-md-{{contentWidth}}\">\n                                    <h1 class=\"mbr-section-title mbr-fonts-style mbr-white\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">EASTERN SUBURBS</h1>\n                                    <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3 mbr-white\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">\n                                        Header Subtitle\n                                    </h2>\n                                    <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                        Hataitai - Kilbirnie - Breaker Bay - Karaka Bays - Maupuia - Melrose - Moa Point - Rongotai - Roseneath</p>\n                                    <div class=\"buttons-wrap d-flex align-left {{buttonsAlign}} align-self-center\" mbr-if=\"showButtons\">\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                                            <a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se/\" data-app-placeholder=\"Type Text\">Download for Windows</a>\n                                        </div>\n                                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn link align-self-center\" mbr-if=\"showLink && showButtons\">\n                                            <a class=\"btn btn-md btn-white-outline my-auto ml-md-4 ml-0\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\" mbr-if=\"showLink && showButtons\">Or View\n                                                Demo</a>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <a class=\"carousel-control carousel-control-prev\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"prev\">\n                <span class=\"mbri-left\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Previous</span>\n            </a>\n            <a class=\"carousel-control carousel-control-next\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"next\">\n                <span class=\"mbri-right\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Next</span>\n            </a>\n        </div>\n    </div>\n</section>",
+          "_cid": "sIuiNAWMur",
+          "_anchor": "slider1-6",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
