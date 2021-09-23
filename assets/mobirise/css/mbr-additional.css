@@ -1496,6 +1496,32 @@ section.lazy-placeholder:after {
 .cid-rzMrbJWA9w .social-media {
   color: #333333;
 }
+.cid-sJQyLsQsEd {
+  padding-top: 75px;
+  padding-bottom: 90px;
+  background-color: #ffffff;
+}
+.cid-sJQyLsQsEd .mbr-section-heading {
+  margin-bottom: 1.5em;
+}
+.cid-sJQyLsQsEd .form-group {
+  margin-bottom: 1.3em;
+}
+.cid-sJQyLsQsEd .form-1 {
+  margin: 0 1em;
+  padding: 0;
+}
+.cid-sJQyLsQsEd .form-control {
+  border: 1px solid #ddd;
+  background-color: white;
+  padding-left: .5em;
+  min-height: 2.5em;
+  width: 100%;
+}
+.cid-sJQyLsQsEd textarea.form-control {
+  height: 15em;
+  padding: 0.5em 0.6em;
+}
 .cid-rzMrdh7IU7 {
   padding-top: 75px;
   padding-bottom: 75px;

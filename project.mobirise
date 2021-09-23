@@ -58,7 +58,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "pwa-switcher": false,
-    "uniqCompNum": 18,
+    "uniqCompNum": 19,
     "versionPublish": "5.4.1",
     "screenshot": "screenshot.png",
     "publishChangesOnly": false,
@@ -392,7 +392,7 @@
             }
           },
           "_name": "menu2",
-          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"color\" title=\"Items Hover Color\" name=\"itemsHoverColor\" value=\"#c1c1c1\" condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Dropdown Menu Color\" name=\"dropdownColor\" value=\"#444444\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#333333\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"index.html#top\">\n                    <img src=\"@PROJECT_PATH@/assets/images/flynnrw-128x128.jpg\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\" title>\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-2\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-warning\" data-app-selector=\".navbar-caption\" href=\"index.html#top\" data-app-placeholder=\"Type Text\">\n                    Flynn&nbsp; 0274 288 058</a></span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                    <a class=\"nav-link link text-warning text-primary\" href=\"index.html#RSRCULADVContactForm-g\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">LET'S GET IT SOLD</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-warning\" href=\"index.html#features5-4\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">ABOUT</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-warning text-primary\" href=\"index.html#header08-9\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">SALES PROCESS</a>\n                </li></ul>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-primary\" href=\"index.html#RSRCULADVContactForm-g\" data-app-placeholder=\"Type Text\">\n                    CONTACT</a></div>\n      </div>\n    </nav>\n</section>",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"color\" title=\"Items Hover Color\" name=\"itemsHoverColor\" value=\"#c1c1c1\" condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Dropdown Menu Color\" name=\"dropdownColor\" value=\"#444444\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#333333\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"index.html#top\">\n                    <img src=\"@PROJECT_PATH@/assets/images/flynnrw-128x128.jpg\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\" title>\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-2\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-warning\" data-app-selector=\".navbar-caption\" href=\"index.html#top\" data-app-placeholder=\"Type Text\">\n                    Flynn&nbsp; 0274 288 058</a></span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                    <a class=\"nav-link link text-warning text-primary\" href=\"index.html#form2-i\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">LET'S GET IT SOLD</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-warning\" href=\"index.html#features5-4\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">ABOUT</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-warning text-primary\" href=\"index.html#header08-9\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">SALES PROCESS</a>\n                </li></ul>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-primary\" href=\"index.html#form2-i\" data-app-placeholder=\"Type Text\">\n                    CONTACT</a></div>\n      </div>\n    </nav>\n</section>",
           "_cid": "rzMrgNeUFf",
           "_anchor": "menu2-7",
           "_protectedParams": [],
@@ -1148,32 +1148,47 @@
           "_params": {}
         },
         {
-          "_params": {
-            "showTitle": true,
-            "showText": true,
-            "to": "flynnol@hotmail.com,flynn.o'leary@raywhite.com",
-            "paddingTop": 1,
-            "paddingBottom": 1,
-            "bgImageRadio": false,
-            "bgImage": "",
-            "parallax": false,
-            "bgColorRadio": true,
-            "bgColor": "#ffffff",
-            "overlay": true,
-            "overlayColor": "#000000",
-            "overlayOpacity": 0.5
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-section-heading": {
+              "margin-bottom": "1.5em"
+            },
+            ".form-group": {
+              "margin-bottom": "1.3em"
+            },
+            ".form-1": {
+              "margin": "0 1em",
+              "padding": "0"
+            },
+            ".form-control": {
+              "border": "1px solid #ddd",
+              "background-color": "white",
+              "padding-left": ".5em",
+              "min-height": "2.5em",
+              "width": "100%"
+            },
+            "textarea.form-control": {
+              "height": "15em",
+              "padding": "0.5em 0.6em"
+            }
           },
-          "to": "flynnol@hotmail.com,flynn.o'leary@raywhite.com",
-          "title": "CONTACT FORM",
-          "text": "Please use the contact form below to get in touch.",
-          "buttons": "<a data-app-btn=\"true\" type=\"submit\" class=\"btn btn-xl btn-success\">Send Message</a>",
-          "alias": "RSStdContactForm",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "RSStdContactForm",
+          "_name": "form2",
           "_sourceTheme": "portfoliom4",
-          "_anchor": "RSStdContactForm-h"
+          "_customHTML": "<section group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"1\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div mbr-form class=\"form-1 col-md-8 col-sm-12\">\n                <!---Formbuilder Form--->\n                <form action=\"flynnol@hotmail.com\" name=\"My Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                    <div class=\"form-row\">\n                        <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Your message has been sent</div>\n                        <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n                    </div>\n                    <div class=\"dragArea form-row\">\n                        <div class=\"col-md-12\">\n                            <h2 mbr-theme-style=\"display-2\" class=\"mbr-fonts-style mbr-fonts-style mbr-fonts-style mbr-section-heading\">Let's Get it Sold!</h2>\n                        </div>\n                        <div class=\"col-md-6 form-group\" data-for=\"name\">\n                            <input type=\"text\" name=\"name\" placeholder=\"Name*\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"field form-control\">\n                        </div>\n                        <div data-for=\"email\" class=\"col-md-6 form-group\">\n                            <input type=\"email\" name=\"email\" placeholder=\"Email*\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" class=\"field form-control\" required=\"required\">\n                        </div>\n                        <div data-for=\"website\" class=\"col-md-6 form-group\">\n                            <input type=\"text\" name=\"website\" placeholder=\"Phone*\" data-form-field=\"Website\" mbr-theme-style=\"display-7\" class=\"field form-control\" required=\"required\">\n                        </div>\n                        <div data-for=\"sujbect\" class=\"col-md-6 form-group\">\n                            <input type=\"text\" name=\"sujbect\" placeholder=\"Subject\" data-form-field=\"Subject\" mbr-theme-style=\"display-7\" class=\"field form-control\">\n                        </div>\n                        <div data-for=\"message\" class=\"col-md-12 form-group \">\n                            <textarea type=\"textarea\" name=\"message\" placeholder=\"Message*\" data-form-field=\"Message\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n                        </div>\n                        <div mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\" class=\"col -auto input-group-btn \">\n                            <a type=\"submit\" class=\"btn btn-form btn-primary\">SEND</a>\n                        </div>\n                    </div>\n                </form><!---Formbuilder Form--->\n            </div>\n        </div>\n   </div>\n</section>",
+          "_cid": "sJQyLsQsEd",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "form2-i"
         },
         {
           "alias": false,
